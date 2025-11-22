@@ -38,4 +38,19 @@ lines(x, col=6); clip(0, 200, 0, 50)
 abline(h=0, a=0, b=.2, col=8, lty=5)
 dev.off()
 
+# hawaii!
+
+pdf("plots/hawaii.pdf", height = 12, width = 6)
+par(mfrow = c(4,1))
+x = window(hor, start=2002)
+out = stl(x, s.window=15)$time.series
+tsplot(x, main="Hawaiian Occupancy Rate", ylab="% rooms", col=8, type="c")
+text(x, labels=1:4, col=c(3,4,2,6), cex=1.25)
+tsplot(out[,1], main="Seasonal", ylab="% rooms", col=8, type="c")
+text(out[,1], labels=1:4, col=c(3,4,2,6), cex=1.25)
+tsplot(out[,2], main="Trend", ylab="% rooms", col=8, type="c")
+text(out[,2], labels=1:4, col=c(3,4,2,6), cex=1.25)
+tsplot(out[,3], main="Noise", ylab="% rooms", col=8, type="c")
+text(out[,3], labels=1:4, col=c(3,4,2,6), cex=1.25)
+dev.off()
 
