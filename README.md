@@ -126,7 +126,7 @@ Examples demonstrating spectral analysis techniques:
 - Periodogram analysis
 - Frequency domain representations
 
-## 📈 Key Topics Covered
+## Key Topics Covered
 
 1. **ARMA Processes**
    - Autoregressive (AR) models
